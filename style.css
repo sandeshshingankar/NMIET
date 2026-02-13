@@ -421,3 +421,33 @@
         padding: var(--spacing-xl);
     }
 }
+/* ================= PRINCIPAL SECTION ================= */
+
+.principal-section {
+    margin-bottom: var(--spacing-3xl);
+    animation: fadeInUp 0.8s ease;
+}
+
+.principal-card-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-2xl);
+}
+
+.role-card.principal-card {
+    max-width: 320px;
+    border-top: 4px solid #F59E0B;
+}
+
+.role-card.principal-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.25);
+}
+
+/* Principal Photo */
+.card-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary);
+}
