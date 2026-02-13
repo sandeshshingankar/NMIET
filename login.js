@@ -5,7 +5,9 @@ const DEMO_CREDENTIALS = {
     admin: { email: 'admin@nmiet.edu.in', password: 'admin123' },
     faculty: { email: 'faculty@nmiet.edu.in', password: 'faculty123' },
     student: { email: 'student@nmiet.edu.in', password: 'student123' },
-    parent: { email: 'parent@nmiet.edu.in', password: 'parent123' }
+    parent: { email: 'parent@nmiet.edu.in', password: 'parent123' },
+    principal: { email: 'principal@nmiet.edu.in', password: 'principal123' },
+
 };
 
 // ---------- ROLE → DEFAULT PAGE ----------
@@ -13,7 +15,9 @@ const ROLE_PAGES = {
     admin: 'hod.html',
     faculty: 'faculty-dashboard.html',
     student: 'student.html',
-    parent: 'parent.html'
+    parent: 'parent.html',
+    principal: 'principal.html'
+
 };
 
 // ================= INIT =================
@@ -85,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function attachRoleCardListeners() {
 
     // ---- ADMIN / STUDENT / PARENT cards ----
-    const roles = ['admin', 'faculty', 'student', 'parent'];
+    const roles = ['admin', 'faculty', 'student', 'parent', 'principal'];
 
     roles.forEach(role => {
         const cardLink = document.querySelector(`a[href="${ROLE_PAGES[role]}"]`);
@@ -261,5 +265,6 @@ function handleCreateAccount(e) {
         "Please contact the IT Department for registration."
     );
 }
+
 
 
