@@ -854,8 +854,53 @@ body {
     .btn-icon {
         font-size: 20px;
     }
+    
 
     .contact-details p {
         font-size: 13px;
     }
 }
+/* Profile Action Buttons */
+.profile-actions {
+    margin-top: 30px;   /* buttons khali anayla */
+    display: flex;
+    gap: 15px;
+}
+
+.action-btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+}
+
+/* Edit Button */
+.edit-btn {
+    background-color: #3b82f6;
+}
+
+.edit-btn:hover {
+    background-color: #2563eb;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: #ef4444;
+}
+
+.delete-btn:hover {
+    background-color: #dc2626;
+}
+
+/* Upload Button */
+.upload-btn {
+    background-color: #10b981;
+}
+
+.upload-btn:hover {
+    background-color: #059669;
+}
+
