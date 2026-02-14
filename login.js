@@ -64,16 +64,22 @@ document.addEventListener('DOMContentLoaded', function () {
     // ===== BLOCK ROLE CLICK WITHOUT DEPARTMENT =====
     const cardLinks = document.querySelectorAll('.card-link');
 
-    cardLinks.forEach(card => {
-        card.addEventListener('click', (e) => {
-            const dept = sessionStorage.getItem('department');
+cardLinks.forEach(card => {
+    card.addEventListener('click', (e) => {
 
-            if (!dept) {
-                e.preventDefault();
-                alert('Please select department first');
-            }
-        });
+        // If Principal card → allow directly
+        if (card.getAttribute('href') === 'principal.html') {
+            return;
+        }
+
+        const dept = sessionStorage.getItem('department');
+
+        if (!dept) {
+            e.preventDefault();
+            alert('Please select department first');
+        }
     });
+});
 
     // ===== CLOSE LOGIN BUTTON =====
     const closeBtn = document.querySelector('.login-close');
@@ -265,6 +271,7 @@ function handleCreateAccount(e) {
         "Please contact the IT Department for registration."
     );
 }
+
 
 
 
